@@ -3,37 +3,33 @@ package two_pointers;
 import java.util.*;
 
 // https://leetcode.com/problems/3sum/
+// https://www.callicoder.com/three-sum-problem/
 public class threeSum {
-    public static List<List<Integer>> threeSum(int[] nums){
+    public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
+        int target = 0;
+
         // base check ensure that nums.length > 3
-        if (nums.length < 3 ){
+        if (nums.length < 3) {
             return result;
         }
-//        // for each i run 2 sum with it
-//        for (int i : nums){
-////            List<Integer> res = findTwoSum()
-//
-//
-//        }
+        for (int i = 0; i < nums.length; i++) {
+            int currentTarget = target - nums[i];
+            Set<Integer> existingNums = new HashSet<>();
+            for (int j = i + 1; j < nums.length; j++) {
+                if (existingNums.contains(currentTarget - nums[j])) {
+                    result.add(Arrays.asList(nums[i], nums[j], currentTarget - nums[j]));
+                } else {
+                    existingNums.add(nums[j]);
+                }
+            }
 
-        return result;
+
+        }return result;
+
     }
 
-    public static List<Integer> findTwoSum(int[] nums, int target){
-        Set<Integer> numMap = new HashSet<>();
-        for (int i = 0; i < nums.length; i++){
-            int complement = target - nums[i];
-            if(numMap.contains(complement)){
-                return Arrays.asList(complement,nums[i]);
-            }
-            else{
-                numMap.add(nums[i]);
-            }
-        }
-        return null;
-    }
 
     public static void main(String[] args){
         int[] nums = new int[]{-1,0,1,2,-1,-4};

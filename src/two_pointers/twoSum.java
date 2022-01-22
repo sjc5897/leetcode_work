@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 // https://leetcode.com/problems/two-sum/
+// https://www.callicoder.com/two-sum-problem/
 public class twoSum {
     // I've done two sum before but the naive approach
     // I am going to try a different one.
