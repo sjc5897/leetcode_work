@@ -1,4 +1,4 @@
-package dfs;
+package bfs_dfs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class LetterCasePermutation {
         dfs(s.toLowerCase(Locale.ROOT).toCharArray(), result, 0, s.length());
         return result;
     }
-    public static void dfs(char[] chArr, List ans, int i, int len){
+    public static void dfs(char[] chArr, List<String> ans, int i, int len){
         if(i<len){
             dfs(chArr, ans, i+1, len);
             if (Character.isLetter(chArr[i])){
