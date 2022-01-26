@@ -1,24 +1,11 @@
 package bfs_dfs;
 
+import leetcode_classes.TreeNode;
+
 // https://leetcode.com/problems/subtree-of-another-tree/
 // https://www.geeksforgeeks.org/check-if-a-binary-tree-is-subtree-of-another-binary-tree/
 public class subtreeOfTree {
-    public static class TreeNode{
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(){}
-        TreeNode(int val){
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right){
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
 
     public static boolean isSubtree(TreeNode root, TreeNode subRoot){
         // check that subRoot is null
