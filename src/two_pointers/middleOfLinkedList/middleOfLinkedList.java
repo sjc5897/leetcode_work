@@ -7,6 +7,8 @@ import java.util.List;
 // https://leetcode.com/problems/middle-of-the-linked-list/
 public class middleOfLinkedList {
 
+    // Use two pointers and iterate one twice as fast as the other,
+    // this creates
     private static ListNode sol1(ListNode head){
         ListNode slow_pointer = head;
         ListNode fast_pointer = head;
